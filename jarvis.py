@@ -12,18 +12,20 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 if __name__== "__main__":
-     speak("mahnoor is a good girl")
+     speak("Welcome to my PC!")
 
 def wishMe():
     hour=int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
       speak("good morning")
+        speak("i am jarvis how may i help you?")
     elif hour>=12 and hour<18:
          speak("good evening")
          speak("i am jarvis how may i help you?")
     else:
-        speak("Good Night!")
-"""def takeCommand():
+        speak("Its past evening!")
+        speak("i am jarvis how may i help you?")
+def takeCommand():
              r=sr.Recognizer()
              with sr.Microphone() as source:
                  print("Listening...")
@@ -37,11 +39,12 @@ def wishMe():
              except Exception as e:
                  print("say that again please...")
                  return "None"       
-             return query"""   
+             return query 
  
 
       
 if __name__== "__main__":
        wishMe()
+       takeCommand()
        
        
